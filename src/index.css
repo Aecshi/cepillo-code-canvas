@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 160 50% 36%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 160 50% 36%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border selection:bg-green-800/20 selection:text-codeCanvas-text;
+  }
+  
+  body {
+    @apply bg-black text-codeCanvas-text font-sans antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title;
+  }
+  
+  section {
+    @apply py-16 md:py-24;
+  }
+
+  .skill-card {
+    @apply bg-codeCanvas-midnight rounded-lg p-4 shadow-md hover:shadow-lg hover:shadow-green-800/30 transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .highlight {
+    @apply text-green-400 font-medium;
+  }
+
+  .btn {
+    @apply bg-transparent text-cream border border-cream px-6 py-2 rounded-md font-medium transition-all hover:bg-cream/10 focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-black focus:outline-none;
+  }
+  
+  .circular-btn {
+    @apply rounded-full flex items-center justify-center border border-cream text-cream transition-all hover:bg-cream/10;
+  }
+
+  code, pre {
+    @apply font-mono text-sm;
+  }
+}
+
+/* 3D Effect Utility Classes */
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  .group:hover .group-hover\:-rotate-y-6 {
+    transform: rotateY(-6deg);
+  }
+  
+  .group:hover .group-hover\:-rotate-y-12 {
+    transform: rotateY(-12deg);
+  }
+}
+
